@@ -1,0 +1,78 @@
+#DARK_SKY
+- platform: darksky
+  api_key: 83c567c0b9716963557fc5541de601ba
+  monitored_conditions:
+    - summary
+    - precip_type
+    - precip_probability
+    - temperature
+    - humidity
+    - temperature_max
+    - temperature_min
+- platform: speedtest
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
+    
+- platform: yr
+  monitored_conditions:
+  - temperature
+  - symbol
+  - precipitation
+      
+
+- platform: time_date
+  display_options:
+  - 'time'
+  - 'date'
+ 
+- platform: mqtt
+  name: "th_1"
+  state_topic: "th_1/temp"
+  qos: 1
+  unit_of_measurement: "°C"
+  value_template: "{{ value_json.Temp }}"
+  
+
+- platform: mqtt
+  name: "pow_1"
+  state_topic: "pow_1/power"
+  qos: 1
+  unit_of_measurement: "W"
+  value_template: "{{ value_json.Power }}"
+  
+- platform: template
+  sensors:
+    estadodotempo:
+      friendly_name: 'Ceu'
+      value_template: > 
+        {%- if is_state('sensor.dark_sky_summary', 'Partly Cloudy') -%}
+          Parcialmente Nublado
+        {%- elif is_state('sensor.dark_sky_summary', 'Clear') -%}
+          Limpo
+        {%- elif is_state('sensor.dark_sky_summary', 'rain') -%}
+          Chuvoso
+        {%- elif is_state('sensor.dark_sky_summary', 'Mostly Cloudy') -%}
+          Muito Nublado
+        {%- endif -%}
+    sunrise:
+      friendly_name: 'Amanhecer'
+      value_template: '{{ as_timestamp(states.sun.sun.attributes.next_rising)|timestamp_custom("%H:%M:%S") }}'
+      entity_id:
+        - sun.sun
+    sunset:
+      friendly_name: 'Por do Sol'
+      value_template: '{{ as_timestamp(states.sun.sun.attributes.next_setting)|timestamp_custom("%H:%M:%S") }}'
+      entity_id:
+        - sun.sun
+    garage_door:
+      friendly_name: 'Porta Garagem'
+      value_template: > 
+        {%- if is_state('binary_sensor.door_window_sensor_158d0001ab72c9', 'off') -%}
+           Fechada
+        {%- else -%}
+           Aberta
+        {%- endif -%}
+

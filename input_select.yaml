@@ -1,0 +1,25 @@
+on_p_radiante:
+  name: 'Ligar Piso Radiante:'
+  options:
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    
+off_p_radiante:
+  name: 'Desigar Piso Radiante:'
+  options:
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24

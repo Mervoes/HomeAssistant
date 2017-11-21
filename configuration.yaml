@@ -1,0 +1,85 @@
+homeassistant:
+  name: Mervoes
+  latitude: xxxxxxx
+  longitude: xxxxxx
+  elevation: xxxxxx
+  unit_system: metric
+  time_zone: Europe/Lisbon
+  customize: !include customize.yaml
+
+frontend:
+
+http api_password: xxxxxxxx
+
+config:
+
+conversation:
+
+discovery:
+
+history:
+
+logbook:
+
+xiaomi_aqara:
+  gateways:
+    - mac: xxxxxxxxxxxx
+      key: xxxxxxxxxxxxxx
+      host: xxxxxxxxxxxxxx
+mqtt:
+  discovery: true
+  discovery_prefix: homeassistant
+  broker: 172.17.0.1
+  port: 1883
+  client_id: hass
+  keepalive: 60
+  username: xxxxxxxx
+  password: xxxxxxxx
+
+sun:
+
+updater:
+
+tts:
+  - platform: google
+    language: 'pt'
+
+###########INCLUDES#####
+sensor: !include sensores.yaml
+switch: !include switch.yaml
+group: !include groups.yaml
+automation: !include automations.yaml
+#input_number: !include input_number.yaml
+input_select: !include input_select.yaml
+input_boolean: !include input_booleans.yaml
+#cover: !include cover.yaml
+
+panel_iframe:
+  configurator:
+    title: Configurator
+    icon: mdi:wrench
+    url: http://hassio.local:3218
+    
+  oscam:
+    title: Oscam
+    icon: mdi:wrench
+    url: http://192.168.1.18:8888
+    
+  boxtv:
+    title: VU+ Uno 4K
+    icon: mdi:television
+    url: http://192.168.1.18
+    
+  router:
+    title: Vodafone
+    icon: mdi:router-wireless
+    url: http://192.168.1.1
+    
+  synology:
+    title: NAS
+    icon: mdi:server
+    url: http://192.168.1.3
+    
+
+
+    

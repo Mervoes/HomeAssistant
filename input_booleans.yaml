@@ -1,0 +1,5 @@
+garage_door:
+  name: Automacão Porta Wc
+  initial: 'On'
+  icon: 'mdi:gesture-double-tap'
+  

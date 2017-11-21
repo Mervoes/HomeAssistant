@@ -1,0 +1,83 @@
+switch.th_1:
+  friendly_name: Piso Radiante Suite
+  icon: mdi:oil-temperature
+switch.4ch_1_1:
+  friendly_name: "Ilumina\xE7\xE3o Quarto 1"
+  icon: mdi:lightbulb-on-outline
+switch.4ch_1_2:
+  friendly_name: "Ilumina\xE7\xE3o Quarto 2"
+  icon: mdi:lightbulb-on-outline
+switch.4ch_1_3:
+  friendly_name: "Ilumina\xE7\xE3o Suite"
+  icon: mdi:lightbulb-on-outline
+switch.4ch_1_4:
+  friendly_name: "Ilumina\xE7\xE3o Hall Quartos"
+  icon: mdi:lightbulb-on-outline
+switch.4ch_2_1:
+  friendly_name: Zona de passagem
+  icon: mdi:lightbulb-on-outline
+switch.4ch_2_2:
+  friendly_name: Zona TV
+  icon: mdi:lightbulb-on-outline
+switch.4ch_2_3:
+  friendly_name: Zona sofas
+  icon: mdi:lightbulb-on-outline
+switch.4ch_2_4:
+  friendly_name: Mesa Jantar
+  icon: mdi:lightbulb-on-outline
+switch.4ch_3_1:
+  friendly_name: "Balc\xE3o"
+  icon: mdi:lightbulb-on-outline
+switch.4ch_3_2:
+  friendly_name: Bancada
+  icon: mdi:lightbulb-on-outline
+switch.4ch_3_3:
+  friendly_name: Zona moveis
+  icon: mdi:lightbulb-on-outline
+switch.4ch_3_4:
+  friendly_name: Zona Bancada
+  icon: mdi:lightbulb-on-outline
+group.luz_quarto_1:
+  friendly_name: Quarto 1
+group.luz_quarto_2:
+  friendly_name: Quarto 2
+group.luz_quarto_3:
+  friendly_name: Suite
+group.luz_corredor_quartos:
+  friendly_name: Hall Quartos
+group.luz_cozinha:
+  friendly_name: Cozinha
+group.luz_sala:
+  friendly_name: Sala
+group.luz_hall:
+  friendly_name: Hall entrada
+group.luz_despensa:
+  friendly_name: Despensa
+group.luz_exterior:
+  friendly_name: Exterior
+group.on_off:
+  friendly_name: ON/OFF
+group.p_radiante:
+  friendly_name: Piso Radiante
+sensor.date:
+  friendly_name: Data
+sensor.speedtest_download:
+  friendly_name: Download
+sensor.speedtest_ping:
+  friendly_name: Ping
+sun.sun:
+  friendly_name: Sol
+sensor.speedtest_upload:
+  friendly_name: Upload
+group.liga_desliga:
+  friendly_name: I/O
+sensor.time:
+  friendly_name: Horas
+sensor.yr_precipitation:
+  friendly_name: "Precipita\xE7\xE3o"
+sensor.yr_temperature:
+  friendly_name: Temperatura
+####
+sensor.garage_door:
+  icon: mdi:glassdoor
+  

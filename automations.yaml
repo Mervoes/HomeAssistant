@@ -1,0 +1,47 @@
+- alias: Turn off rele porta garagem
+  trigger:
+    platform: state
+    entity_id: switch.p_garagem
+    to: 'on'
+    for:
+      seconds: 1
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.p_garagem
+##################################################################
+- alias: "Desligar aquecedor"
+  hide_entity: True
+  trigger:
+    platform: template
+    value_template: "{{(states.sensor.th_1.state | int) > (states.input_number.offaquecedor.state | int)}}"
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.th_1
+
+- alias: "Ligar aquecedor"
+  hide_entity: True
+  trigger:
+    platform: template
+    value_template: "{{(states.sensor.th_1.state | int) < (states.input_number.onaquecedor.state | int)}}"
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.th_1
+
+####################################################################
+- alias: "Desligar aquecedor"
+  hide_entity: True
+  trigger:
+    platform: template
+    value_template: "{{(states.sensor.th_1.state | int) > (states.input_select.off_p_radiante.state | int)}}"
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.th_1
+####################################################################
+- alias: "Ligar aquecedor"
+  hide_entity: True
+  trigger:
+    platform: template
+    value_template: "{{(states.sensor.th_1.state | int) < (states.input_select.on_p_radiante.state | int)}}"
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.th_1

@@ -1,0 +1,13 @@
+onaquecedor:
+  name: Ligar aquecedor na temperatura
+  min: 0
+  max: 50
+  step: 1
+  icon: mdi:timer
+  
+offaquecedor:
+  name: Desligar aquecedor na temperatura
+  min: 0
+  max: 50
+  step: 1
+  icon: mdi:timer

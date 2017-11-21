@@ -1,0 +1,136 @@
+##### Separadores #####
+
+default_view:
+  view: yes
+  icon: mdi:home-assistant
+  entities:
+   - sensor.yr_symbol
+   - sensor.yr_temperature
+   - sensor.yr_precipitation
+   - sensor.time
+   - switch.p_garagem
+   - sensor.garage_door
+   - sensor.estadodotempo
+   - sensor.dark_sky_temperature
+   - sensor.dark_sky_humidity
+
+Lampadas:
+  name: Iluminacao
+  view: yes
+  icon: mdi:lightbulb
+  entities:
+    - group.luz_quarto_1
+    - group.luz_quarto_2
+    - group.luz_quarto_3
+    - group.luz_corredor_quartos
+    - group.luz_hall
+    - group.luz_sala
+    - group.luz_cozinha
+    - group.luz_despensa
+    - group.luz_exterior
+
+onoff:
+  name: liga_desliga
+  view: yes
+  icon: mdi:lightbulb-outline
+  entities:
+    - group.liga_desliga
+
+piso_radiante:
+  name: Piso Radiante
+  view: Yes
+  icon: mdi:oil-temperature
+  entities:
+    - group.p_radiante
+    - sensor.th_1
+    - sensor.pow_1
+    - sensor.temperature_158d0001ab2b17
+
+Estores:
+  name: Estores
+  view: yes
+  icon: mdi:blind
+  entities:
+    - group.blinds
+
+##### Grupos #####
+
+
+luz_quarto_1: 
+   - switch.4ch_1_1
+   
+luz_quarto_2:
+   - switch.4ch_1_2
+
+luz_quarto_3:
+   - switch.4ch_1_3
+
+luz_corredor_quartos:
+   - switch.4ch_1_4
+
+luz_hall:
+   - switch.4ch_5_1
+
+luz_sala:
+   - switch.4ch_2_1 #corredor sala
+   - switch.4ch_2_2 #sala tv
+   - switch.4ch_2_3 #sala sofas
+   - switch.4ch_2_4 #sala jantar
+
+luz_cozinha:
+   - switch.4ch_3_1 #balcao cozinha
+   - switch.4ch_3_2 #bancada cozinha
+   - switch.4ch_3_3 #moveis altos cozinha
+   - switch.4ch_3_4 #lava loica cozinha
+
+luz_despensa:
+   - switch.4ch_5_2
+
+luz_exterior:
+   - switch.4ch_4_1 #alpendre
+   - switch.4ch_4_2 #porta entrada
+   - switch.4ch_4_3 #varanda quarto
+
+#### ON / OFF ###
+
+liga_desliga:
+   - switch.4ch_1_1 #luz quarto 1
+   - switch.4ch_1_2 #luz quarto 2
+   - switch.4ch_1_3 #luz suite
+   - switch.4ch_1_4 #luz corredor quartos
+   - switch.4ch_2_1 #corredor sala
+   - switch.4ch_2_2 #sala tv
+   - switch.4ch_2_3 #sala sofas
+   - switch.4ch_2_4 #sala jantar
+   - switch.4ch_3_1 #balcao cozinha
+   - switch.4ch_3_2 #bancada cozinha
+   - switch.4ch_3_3 #moveis altos cozinha
+   - switch.4ch_3_4 #lava loica cozinha
+   - switch.4ch_4_1 #alpendre
+   - switch.4ch_4_2 #porta entrada
+   - switch.4ch_4_3 #varanda quarto
+   - switch.4ch_5_1 #luz hall
+   - switch.4ch_5_2 #luz despensa
+
+#### ON / OFF ###
+
+
+##### Piso Radiante ##### 
+
+p_radiante:
+   - switch.th_1
+   - switch.pow_1
+   - input_number.onaquecedor
+   - input_number.offaquecedor
+   - input_select.on_p_radiante
+   - input_select.off_p_radiante
+
+##### POW #####
+
+
+   
+##### Estores #####
+
+blinds:
+   - switch.dual_1
+   - switch.dual_1_1
